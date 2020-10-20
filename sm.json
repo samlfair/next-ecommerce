@@ -1,0 +1,4 @@
+{
+  "libraries": ["@/slices"],
+  "apiEndpoint": "https://sam-ecommerce-learning.cdn.prismic.io/api/v2"
+}
