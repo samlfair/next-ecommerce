@@ -3,16 +3,14 @@ import SliceZone from 'next-slicezone'
 import { useGetStaticProps, useGetStaticPaths } from 'next-slicezone/hooks'
 
 import resolver from '../sm-resolver.js'
+import { Layout } from '../components/Layout'
 
 const Product = (props) => (
   <>
-    <h1>{props.data.name}</h1>
-    <SliceZone {...props} resolver={resolver} />
-    <code>{JSON.stringify(props.data.thumbnail_image.small_banner.url)}</code>
-    <p></p>
-    <img src={props.data.thumbnail_image.small_banner.url} />
-    <img src={props.data.product.image_url_rect} />
-    <img src={props.data.product.image_url_square} />
+    <Layout>
+      <h1>{props.data.name}</h1>
+      <SliceZone {...props} resolver={resolver} />
+    </Layout>
   </>
 )
 

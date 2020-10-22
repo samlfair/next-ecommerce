@@ -1,0 +1,87 @@
+@mixin columns($columns) {
+  columns: $columns;
+  -webkit-columns: $columns;
+  -moz-columns: $columns;
+}
+
+@mixin transition($property: all, $duration: 0.25s, $ease: ease-in) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -ms-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
+}
+
+@mixin rotate($degrees) {
+  -moz-transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin transform($translateX, $translateY) {
+  -moz-transform: translateX($translateX) translateY($translateY);
+  -webkit-transform: translateX($translateX) translateY($translateY);
+  -o-transform: translateX($translateX) translateY($translateY);
+  -ms-transform: translateX($translateX) translateY($translateY);
+  transform: translateX($translateX) translateY($translateY);
+}
+
+@mixin transform-and-rotate($translateX, $translateY, $degrees) {
+  -moz-transform: translateX($translateX) translateY($translateY)
+    rotate($degrees);
+  -webkit-transform: translateX($translateX) translateY($translateY)
+    rotate($degrees);
+  -o-transform: translateX($translateX) translateY($translateY) rotate($degrees);
+  -ms-transform: translateX($translateX) translateY($translateY)
+    rotate($degrees);
+  transform: translateX($translateX) translateY($translateY) rotate($degrees);
+}
+
+@mixin svg-color($color) {
+  svg,
+  svg rect,
+  svg path,
+  svg polygon {
+    fill: $color;
+    opacity: 1;
+    fill-opacity: 1;
+  }
+}
+
+@mixin svg-color-keep-opacity($color) {
+  svg,
+  svg rect,
+  svg path,
+  svg polygon {
+    fill: $color;
+  }
+}
+
+@mixin svg-stroke-color($color) {
+  svg,
+  svg rect,
+  svg path {
+    stroke: $color;
+    opacity: 1;
+    fill-opacity: 1;
+  }
+}
+
+@mixin icon-width-height($size) {
+  div,
+  img,
+  svg {
+    width: $size;
+    height: $size;
+  }
+}
+
+@mixin svg-width($width) {
+  div,
+  img,
+  svg {
+    width: $width;
+  }
+}
