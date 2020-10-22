@@ -6,7 +6,6 @@ import resolver from '../sm-resolver.js'
 
 const Product = (props) => (
   <>
-    {console.log('props', props)}
     <h1>{props.data.name}</h1>
     <SliceZone {...props} resolver={resolver} />
     <code>{JSON.stringify(props.data.thumbnail_image.small_banner.url)}</code>
@@ -30,9 +29,9 @@ useGetStaticProps() builds on getStaticProps(), adding Prismic API querying. You
 can get your data by passing a few options to useGetStaticProps():
 - queryType: 'single' or 'repeatable' (defaults to 'repeatable')
 - client: Client(), the api configuration, as imported from '~/prismic.js'
-- type: document type (defaults to 'page')
+- type: Prismic custom type (defaults to 'page')
 - uid: document uid
-- lang: document language, if empty API will return primary language
+- lang: document language (ignored if params is defined; if lang is empty API will return primary language)
 - body: the key where your slices array is stored (defaults to 'body')
 - params: query options, such as fetchLinks (don't confuse with url params)
 
@@ -66,16 +65,16 @@ export const getStaticProps = useGetStaticProps({
 
 /*
 getStaticPaths() is the Nextjs lifecycle hook for generating page paths in
-SSG apps. It is only necessary for dynamic paths, like [uid], because otherwise
-there is only one path. useGetStaticPaths() queries the Prismic API to
-determine what paths to generate. It necessarily queries repeatable types.
+SSG apps. It is only necessary for pages with dynamic paths, like `~/pages/[uid].js`. 
+useGetStaticPaths() queries the Prismic API to determine what paths to generate. 
+It only queries repeatable types.
 
 useGetStaticPaths() takes six options:
 - type: document type (defaults to 'page')
 - formatPath: function to format Next path argument	(see Next.js docs for more info)
 - fallback: boolean (defaults to false; see Next.js docs on fallbacks)
 - params: query options, such as fetchLinks (don't confuse with url params)
-- lang: document language, if empty API will return primary language
+- lang: document language (ignored if params is defined; if lang is empty API will return primary language)
 - client: Client(), the api configuration, as imported from '~/prismic.js'
 
 The required fields are:
