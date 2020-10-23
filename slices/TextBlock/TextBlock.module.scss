@@ -3,7 +3,13 @@
 $this-color-primary: $color-primary;
 
 .richText {
-  p {
-    // color: $this-color-primary;
+  ul {
+    li {
+      &::before {
+        content: '•';
+        margin-right: 8px;
+        margin-left: 3px;
+      }
+    }
   }
 }

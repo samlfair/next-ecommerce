@@ -1,0 +1,45 @@
+@import './theme';
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+pre {
+  margin-bottom: 0.5em;
+  &:not(pre) {
+    font-family: $sans-font-family;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0px 0rem;
+}
+
+h2 {
+  padding: 1rem 0px 0rem;
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+
+h3 {
+  padding: 0.7rem 0px 0rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+pre {
+  font-family: monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

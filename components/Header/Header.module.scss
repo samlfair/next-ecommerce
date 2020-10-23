@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  &__container {
+    border: 5px solid #010000;
+    background: #eef;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: 80%;
+    margin-bottom: 5%;
+    height: auto;
+  }
+}
