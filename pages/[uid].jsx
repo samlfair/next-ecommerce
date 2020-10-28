@@ -1,14 +1,14 @@
 import { Client } from '../prismic'
 import SliceZone from 'next-slicezone'
 import { useGetStaticProps, useGetStaticPaths } from 'next-slicezone/hooks'
-
 import resolver from '../sm-resolver.js'
 import { Layout } from '../components/Layout'
+import ProductHeader from '../components/ProductDetail'
 
 const Product = (props) => (
   <>
     <Layout config={props.config}>
-      <h1>{props.data.name}</h1>
+      <ProductHeader product={props.data} />
       <SliceZone {...props} resolver={resolver} />
     </Layout>
   </>

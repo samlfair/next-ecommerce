@@ -1,1 +1,11 @@
 @import './theme';
+
+.narrow {
+  max-width: $layout-narrow;
+  margin: auto;
+}
+
+.wide {
+  max-width: $layout-wide;
+  margin: auto;
+}

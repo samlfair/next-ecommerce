@@ -43,3 +43,33 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+p,
+li {
+  line-height: 1.3em;
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+  a {
+    box-shadow: inset 0px -0.6rem 0px 0px rgba(255, 248, 144, 0.5);
+    transition: box-shadow 0.2s;
+    &:hover {
+      box-shadow: inset 0px -0.6rem 0px 0px rgba(255, 248, 144, 0.9);
+    }
+  }
+}
+
+ul {
+  li:before {
+    content: '•';
+    display: inline-block;
+    width: 2px;
+    margin-left: -12px;
+    margin-right: 10px;
+  }
+  li {
+    margin-left: 12px;
+    margin-bottom: 0.4rem;
+    line-height: 1.2rem;
+  }
+}

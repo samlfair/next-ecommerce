@@ -4,7 +4,7 @@ import { RichText } from 'prismic-reactjs'
 import styles from './TextBlock.module.scss'
 
 const TextBlock = ({ slice }) => (
-  <div className={`slice ${styles.richText}`}>
+  <div className={`slice narrow ${styles.richText}`}>
     {slice.primary.text ? <RichText render={slice.primary.text} /> : <p></p>}
   </div>
 )

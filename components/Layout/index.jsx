@@ -6,7 +6,7 @@ import Footer from '../Footer'
 export const Layout = ({ children, config }) => {
   const { site_title, site_logo, footer } = config
   return (
-    <div className={styles.siteWrapper}>
+    <div className={`narrow ${styles.siteWrapper}`}>
       <Header config={{ site_title, site_logo }} />
       <main>{children}</main>
       <div className={styles.footer}>

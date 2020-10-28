@@ -1,0 +1,17 @@
+@import './../../styles/theme';
+
+$grey: #aaa;
+
+.nav {
+  margin-top: 0.5rem;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+  padding: 5px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: $sans-font-family;
+  color: $grey;
+  text-transform: uppercase;
+}
